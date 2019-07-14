@@ -10,8 +10,8 @@ class Solution:
         result = []
         nums.sort()
         for idx, i in enumerate(nums):
-            if idx >0:
-                if nums[idx]==nums[idx-1]:
+            if idx > 0:
+                if nums[idx] == nums[idx - 1]:
                     continue
             s = -i
             left = idx + 1
@@ -24,7 +24,8 @@ class Solution:
                 else:
                     result.append([i, nums[left], nums[right]])
                     left += 1
-                    while left>1 and left<right and nums[left]==nums[left-1]:
+                    while left > 1 and left < right and nums[left] == nums[
+                            left - 1]:
                         left += 1
 
         return result
